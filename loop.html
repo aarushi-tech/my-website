@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Iterative Control Structure(Loop)</title>
+<style>
+.program{
+background-color:#f2f2f2;
+padding:15px;
+border:1px solid #000;
+width:80%;
+}
+
+.output{
+background-color:#e8f5e9;
+padding:15px;
+border:1px solid green;
+width:80%;
+}
+</style>
+</head>
+<body>
+<h2>Iterative Control Structure(Loop) Programs</h2>
+<h2>Questions</h2>
+
+<h3>Question 1</h3>
+<p>Enter a number from the user and find out the binary of that number.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int n, r, b=0, p=1;
+clrscr();
+
+printf("Enter a number: ");
+scanf("%d",&n);
+
+while(n>0)
+{
+    r=n%2;
+    b=b+r*p;
+    p=p*10;
+    n=n/2;
+}
+
+printf("Binary = %d",b);
+delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 10
+Binary = 1010
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 2</h3>
+<p>Enter a number from the user and check that the number is divisible by any prime number or not.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int n, i, j, c;
+clrscr();
+
+printf("Enter a number: ");
+scanf("%d", &n);
+
+for(i=2; i&lt;n; i++)
+{
+    c=0;
+
+    for(j=2; j&lt;i; j++)
+    {
+        if(i%j==0)
+        c=1;
+    }
+
+    if(c==0 &amp;&amp; n%i==0)
+    {
+        printf("Divisible by prime number %d", i);
+		break;
+    }
+}
+
+    if(i==n)
+	{
+        printf("Not divisible by any prime number");
+	}
+
+delay(5000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 10
+Divisible by prime number 2
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 3</h3>
+<p>Enter a number from the user and check it is a prime number or not.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int n,i,count=0;
+clrscr();
+printf("Enter a number: ");
+scanf("%d",&n);
+for(i=1;i&lt;n;i++)
+{
+	if(n%i==0)
+	count++;
+}
+if(count==2)
+{
+	printf("Prime number");
+}
+else
+{
+	printf("Not a prime number");
+}
+delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 7
+Prime number
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 4</h3>
+<p>Enter a number from the user and print all the digit of the number in a separate line.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int n,r;
+clrscr();
+printf("Enter a number: ");
+scanf("%d",&n);
+while(n>0)
+{
+	r=n%10;
+	printf("%d\n",r);
+	n=n/10;
+}
+delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 1234
+4
+3
+2
+1
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 5</h3>
+<p>Write a program to print your name 1 lakh times.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int i;
+clrscr();
+for(i=1;i&lt;100000;i++)
+{
+printf("Aarushi\n");
+}
+delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+Aarushi
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 6</h3>
+<p>Write a program to print series 1 to 1 lakh.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i;
+clrscr();
+for(i=1;i&lt;100000;i++)
+{
+	printf("%d\n",i);
+}
+delay(5000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+...
+99998
+99999
+100000
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 7</h3>
+<p>Enter a number from the user and print the series from 1 to that number.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int n,i;
+clrscr();
+printf("Enter a number: ");
+scanf("%d",&n);
+for(i=1;i&lt;n;i++)
+{
+	printf("%d\n",i);
+}
+delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 5
+1
+2
+3
+4
+5
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 8</h3>
+<p>Enter a number from the user and print that number 100 times.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int n,i;
+clrscr();
+printf("Enter a number: ");
+scanf("%d",&n);
+for(i=1;i&lt;100;i++)
+{
+printf("%d\n",n);
+}
+delay(5000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+...
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 9</h3>
+<p>Write a program to print all the odd number between 1 to 100.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int i;
+clrscr();
+for(i=1;i&lt;100;i++)
+{
+if(i%2!=0)
+printf("%d\n",i);
+}
+delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+47
+49
+51
+53
+55
+57
+59
+61
+63
+65
+67
+69
+71
+73
+75
+77
+79
+81
+83
+85
+87
+89
+91
+93
+95
+97
+99
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 10</h3>
+<p>Write a program to print the table of 4 in the format given as below (till 20) 4*1=4 and so on.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int i;
+clrscr();
+for(i=1;i&lt;20;i++)
+{
+	printf("4*%d=%d\n",i,4*i);
+}
+delay(1000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+4*1=4
+4*2=8
+4*3=12
+4*4=16
+4*5=20
+4*6=24
+4*7=28
+4*8=32
+4*9=36
+4*10=40
+4*11=44
+4*12=48
+4*13=52
+4*14=56
+4*15=60
+4*16=64
+4*17=68
+4*18=72
+4*19=76
+4*20=80
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 11</h3>
+<p>Enter a number from the user and reverse the number.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+int n,r,rev=0;
+clrscr();
+printf("Enter a number: ");
+scanf("%d",&n);
+while(n>0)
+{
+	r=n%10;
+	rev=rev*10+r;
+	n=n/10;
+}
+printf("Reverse number=%d",rev);
+delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 1234
+Reverse number=4321
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 12</h3>
+<p>Enter a number from the user if the user enter 1 then you will perform addition operation by entering 2 number from user 
+add it and display answer. if user enter 2 then subtract or if user enter 3 then multiply or if user enter 4 then divide 
+or if user enter 5 then modulo or if any other number then print invalid .if user want to quit the program then user will 
+enter Q.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int a, b, ch;
+    char q;
+
+    clrscr();
+
+    do
+    {
+        printf("\n1. Addition");
+        printf("\n2. Subtraction");
+        printf("\n3. Multiplication");
+        printf("\n4. Division");
+        printf("\n5. Modulo");
+        printf("\nEnter Q to quit");
+
+        printf("\nEnter your choice: ");
+        scanf("%d", &ch);
+
+        if(ch >= 1 && ch &lt; 5)
+        {
+            printf("Enter two numbers: ");
+            scanf("%d%d", &a, &b);
+        }
+
+        switch(ch)
+        {
+            case 1:
+                printf("Answer = %d", a + b);
+                break;
+
+            case 2:
+                printf("Answer = %d", a - b);
+                break;
+
+            case 3:
+                printf("Answer = %d", a * b);
+                break;
+
+            case 4:
+                if(b != 0)
+                    printf("Answer = %d", a / b);
+                else
+                    printf("Cannot divide by zero");
+                break;
+
+            case 5:
+                if(b != 0)
+                    printf("Answer = %d", a % b);
+                else
+                    printf("Cannot use modulo with zero");
+                break;
+
+            default:
+                printf("Invalid choice");
+        }
+
+        printf("\nEnter Q to quit or any key to continue: ");
+        scanf(" %c", &q);
+
+    } while(q != 'Q' && q != 'q');
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter Q to quit
+Enter your choice: 1
+Enter two numbers: 10 5
+Answer = 15
+Enter Q to quit or any key to continue: a
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter Q to quit
+Enter your choice: 2
+Enter two numbers: 10 5
+Answer = 5
+Enter Q to quit or any key to continue: a
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter Q to quit
+Enter your choice: 3
+Enter two numbers: 10 5
+Answer = 50
+Enter Q to quit or any key to continue: a
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter Q to quit
+Enter your choice: 4
+Enter two numbers: 10 5
+Answer = 2
+Enter Q to quit or any key to continue: a
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter Q to quit
+Enter your choice: 5
+Enter two numbers: 10 3
+Answer = 1
+Enter Q to quit or any key to continue: Q
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 13</h3>
+<p>Enter the number from user and check its palindrome or not.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+#include<stdio.h>
+#include<conio.h>
+
+void main()
+{
+    int n, r, rev=0, temp;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    temp=n;
+
+    while(n>0)
+    {
+        r=n%10;
+        rev=rev*10+r;
+        n=n/10;
+    }
+
+    if(temp==rev)
+        printf("Palindrome number");
+    else
+        printf("Not a palindrome number");
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 121
+Palindrome number
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 14</h3>
+<p>Enter two numbers from users, one is base and second is power. Write the result.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int b, p, i, result=1;
+    clrscr();
+
+    printf("Enter base: ");
+    scanf("%d",&b);
+
+    printf("Enter power: ");
+    scanf("%d",&p);
+
+    for(i=1; i&lt;p; i++)
+    {
+        result=result*b;
+    }
+
+    printf("Result = %d",result);
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter base: 2
+Enter power: 3
+Result = 8
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 15</h3>
+<p>Enter a number from user and print first digit of number.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int n;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    while(n>=10)
+    {
+        n=n/10;
+    }
+
+    printf("First digit = %d",n);
+
+    delay(3000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 4567
+First digit = 4
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 16</h3>
+<p>Enter a number from user and print total from 0 to that number.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int n, i, sum=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    for(i=0; i&lt;n; i++)
+    {
+        sum=sum+i;
+    }
+
+    printf("Total = %d",sum);
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 5
+Total = 15
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 17</h3>
+<p>Enter a number from user and find out factorial of that number.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int n, i, fact=1;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    for(i=1; i&lt;n; i++)
+    {
+        fact=fact*i;
+    }
+
+    printf("Factorial = %d",fact);
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 5
+Factorial = 120
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 18</h3>
+<p>Enter two numbers from user and print range from first number to second number.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int a, b, i;
+    clrscr();
+
+    printf("Enter first number: ");
+    scanf("%d",&a);
+
+    printf("Enter second number: ");
+    scanf("%d",&b);
+
+    for(i=a; i&lt;b; i++)
+    {
+        printf("%d ",i);
+    }
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter first number: 5
+Enter second number: 10
+5 6 7 8 9 10
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 19</h3>
+<p>Enter password from user maximum 20 digits / character press enter key if you want to exit.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    char pass[21];
+    int i=0;
+    char ch;
+
+    clrscr();
+
+    printf("Enter password (max 20 characters): ");
+
+    while(i&lt;20)
+    {
+        ch=getch();
+
+        if(ch==13)
+            break;
+
+        pass[i]=ch;
+        printf("*");
+        i++;
+    }
+
+    pass[i]='\0';
+
+    printf("\nPassword entered.");
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter password (max 20 characters): ******
+Password entered.
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 20</h3>
+<p>Write a program to print the counting 1 to 100 with one second delay .</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int i;
+    clrscr();
+
+    for(i=1; i&lt;100; i++)
+    {
+        printf("%d\n",i);
+        delay(1000);
+    }
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+.
+.
+.
+100
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 21</h3>
+<p>Write a program to find out the Fibonacci series/ 1 to 100 (like 0 1 1 2 3 5 8
+13………..).</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int a=0, b=1, c;
+    clrscr();
+
+    while(a&lt;100)
+    {
+        printf("%d ",a);
+
+        c=a+b;
+        a=b;
+        b=c;
+    }
+
+    delay(5000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+0 1 1 2 3 5 8 13 21 34 55 89
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 22</h3>
+<p>Enter a character from user and that character should be alphabet.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    char ch;
+    clrscr();
+
+    printf("Enter a character: ");
+    scanf("%c",&ch);
+
+    if((ch>='A' && ch&lt;'Z') || (ch>='a' && ch&lt;'z'))
+        printf("It is an alphabet");
+    else
+        printf("It is not an alphabet");
+
+    delay(4000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a character: A
+It is an alphabet
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 23</h3>
+<p>Enter a number from user and check it is Armstrong number or not.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void main()
+{
+    int n, temp, r, sum=0;
+    clrscr();
+
+    printf("Enter a number: ");
+    scanf("%d",&n);
+
+    temp=n;
+
+    while(n>0)
+    {
+        r=n%10;
+        sum=sum+(r*r*r);
+        n=n/10;
+    }
+
+    if(temp==sum)
+        printf("Armstrong number");
+    else
+        printf("Not an Armstrong number");
+
+    delay(5000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+Enter a number: 153
+Armstrong number
+</pre>
+</div>
+
+<br><br>
+
+</body>
+</html>

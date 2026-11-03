@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recursion</title>
+<style>
+.program{
+background-color:#f2f2f2;
+padding:15px;
+border:1px solid #000;
+width:90%;
+}
+
+.output{
+background-color:#e8f5e9;
+padding:15px;
+border:1px solid green;
+width:80%;
+}
+</style>
+</head>
+<body>
+<h2>Recursion Programs</h2>
+<h2>Questions</h2>
+
+<h3>Question 1</h3>
+<p>Write a program of recursion and display the output.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+int x=1;
+void fun()
+{
+if(x==5)
+{
+printf("%d",x);
+x++;
+fun();
+}
+printf("A");
+}
+void main()
+{
+clrscr();
+fun();
+delay(3000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+12345AAAAAA
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 2</h3>
+<p>Write a program of recursion with global variable and display the output.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+int x=1;
+void fun()
+{
+if(x==5)
+{
+printf("%d",x);
+x++;
+fun();
+}
+}
+void main()
+{
+clrscr();
+fun();
+delay(3000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+12345
+</pre>
+</div>
+
+<br><br>
+
+<h3>Question 2</h3>
+<p>Write a program of recursion with local variable and display the output.</p>
+<div class="program">
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;conio.h&gt;
+#include&lt;dos.h&gt;
+void fun(int x)
+{
+if(x==5)
+{
+x++;
+fun(x);
+printf("%d",x);
+}
+}
+void main()
+{
+clrscr();
+fun();
+delay(3000);
+}
+</pre>
+</div>
+
+<h2>Output</h2>
+<div class="output">
+<pre>
+65432
+</pre>
+</div>
+
+<br><br>
+
+</body>
+</html>
